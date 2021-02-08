@@ -32,21 +32,21 @@ const Game = () => {
   }, [invalidMove])
 
   const handleClick = (i, j) => {
-    console.log(i, j)
+    // console.log(i, j)
     if (gameState[i][j].value === "") {
       if (isSourceSelected) {
-        console.log("SourceSelected EMPTY")
+        // console.log("SourceSelected EMPTY")
         performMarbleMovement(sourcePos[0], sourcePos[1], i, j)
       } else {
-        console.log("No SourceSelected EMPTY") // Do nothing
+        // console.log("No SourceSelected EMPTY") // Do nothing
       }
     } else {
       if (isSourceSelected) {
         // Show error msg
-        console.log("SourceSelected NON EMPTY =>  Error....!!!!")
+        // console.log("SourceSelected NON EMPTY =>  Error....!!!!")
         hideAvailableSlots(sourcePos[0], sourcePos[1])
       } else {
-        console.log("No SourceSelected NON EMPTY")
+        // console.log("No SourceSelected NON EMPTY")
         const slots = showAvailableSlots(i, j)
       }
     }
@@ -80,7 +80,7 @@ const Game = () => {
         setIsSourceSelected(true)
         setSourcePos([i, j])
       }
-      console.log("showAvailableSlots : ", slot)
+      // console.log("showAvailableSlots : ", slot)
     })
   }
 
@@ -119,7 +119,8 @@ const Game = () => {
       },
     })
       .then((response) => response.json())
-      .then((json) => console.log(json))
+      .then((json) => {})
+
     resetGame()
   }
 

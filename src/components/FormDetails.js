@@ -69,7 +69,7 @@ const FormDetails = (props) => {
   }
 
   const handleSubmitClick = (e) => {
-    console.log("handleSubmitClick")
+    // console.log("handleSubmitClick")
     e.preventDefault()
     if (username === "") {
       setIsError(true)
