@@ -54,12 +54,22 @@ const Game = () => {
 
   const performMarbleMovement = (si, sj, di, dj) => {
     if (gameState[di][dj].isValid) {
+      // console.log("performMarbleMovement")
       setGameState(di, dj, "O", false)
       setGameState((si + di) / 2, (sj + dj) / 2, "", false)
       setGameState(si, sj, "", false)
       setIsSourceSelected(false)
       setSourcePos([])
       setScore((score) => score - 1)
+
+      const avlSlots = Object.entries(slots).filter(
+        (obj) => obj[0] === `${si}:${sj}`
+      )[0][1]
+
+      avlSlots.map((slot) => {
+        gameState[slot.er][slot.ec].isValid =
+          gameState[slot.er][slot.ec].isValid && false
+      })
     } else {
       hideAvailableSlots(sourcePos[0], sourcePos[1])
       setInvalidMove(true)
