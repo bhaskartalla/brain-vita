@@ -57,7 +57,7 @@ export const useGameState = () => {
     "3:0": [{ nr: 3, nc: 1, er: 3, ec: 2 }],
     "3:1": [{ nr: 3, nc: 2, er: 3, ec: 3 }],
     "3:2": [
-      { nr: 2, nc: 2, er: 2, ec: 1 },
+      { nr: 2, nc: 2, er: 1, ec: 2 },
       { nr: 3, nc: 3, er: 3, ec: 4 },
       { nr: 4, nc: 2, er: 5, ec: 2 },
       { nr: 3, nc: 1, er: 3, ec: 0 },
