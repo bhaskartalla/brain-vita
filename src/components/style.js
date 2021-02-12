@@ -7,8 +7,9 @@ export const Board = styled.div`
   max-height: 560px;
   width: 98%;
   margin: auto;
-  min-height: 560px;
+  min-height: 500px;
   align-items: center;
+  justify-content: center;
 `
 
 export const Top = styled.div`

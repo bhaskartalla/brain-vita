@@ -13,16 +13,14 @@ const FormWrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: unset;
+    padding: 0 0 16px;
   }
 `
 
 const InputWrapper = styled.div`
   width: 300px;
   height: 40px;
-  margin: 0 16px;
-  @media (max-width: 768px) {
-    margin: 12px 0 30px;
-  }
+  margin: 16px;
 `
 
 const ErrorMsg = styled.label`
@@ -47,6 +45,16 @@ const Input = styled.input`
 const Label = styled.label`
   font-size: 24px;
   font-family: monospace;
+`
+
+const FormDiv = styled.div`
+  width: 100%;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+  }
 `
 
 const SubmitButton = styled.button`
@@ -92,19 +100,21 @@ const FormDetails = (props) => {
   return (
     <FormWrapper>
       <Label>Enter name</Label>
-      <InputWrapper>
-        <Input
-          placeholder='Player Name'
-          type='text'
-          value={username}
-          onChange={handleInputChange}
-          isError={isError}
-        />
-        {isError && <ErrorMsg>Please enter valid Player name</ErrorMsg>}
-      </InputWrapper>
-      <SubmitButton type='submit' onClick={handleSubmitClick}>
-        Submit
-      </SubmitButton>
+      <FormDiv>
+        <InputWrapper>
+          <Input
+            placeholder='Player Name'
+            type='text'
+            value={username}
+            onChange={handleInputChange}
+            isError={isError}
+          />
+          {isError && <ErrorMsg>Please enter valid Player name</ErrorMsg>}
+        </InputWrapper>
+        <SubmitButton type='submit' onClick={handleSubmitClick}>
+          Submit
+        </SubmitButton>
+      </FormDiv>
     </FormWrapper>
   )
 }
