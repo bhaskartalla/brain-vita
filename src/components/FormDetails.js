@@ -6,13 +6,23 @@ const FormWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  flex-wrap: wrap;
+  padding: 16px 0;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: space-between;
+    height: unset;
+  }
 `
 
 const InputWrapper = styled.div`
   width: 300px;
   height: 40px;
   margin: 0 16px;
+  @media (max-width: 768px) {
+    margin: 12px 0 30px;
+  }
 `
 
 const ErrorMsg = styled.label`
@@ -92,7 +102,6 @@ const FormDetails = (props) => {
         />
         {isError && <ErrorMsg>Please enter valid Player name</ErrorMsg>}
       </InputWrapper>
-
       <SubmitButton type='submit' onClick={handleSubmitClick}>
         Submit
       </SubmitButton>

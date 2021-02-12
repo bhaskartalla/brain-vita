@@ -2,8 +2,10 @@ import React from "react"
 import styled from "styled-components"
 
 const Box = styled.button`
-  width: 80px;
-  height: 80px;
+  max-width: 80px;
+  max-height: 80px;
+  width: 100%;
+  height: 100%;
   outline: none;
   font-family: fantasy;
   font-size: 48px;

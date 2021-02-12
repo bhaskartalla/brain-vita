@@ -4,7 +4,7 @@ import {
   Top,
   Middle,
   Bottom,
-  InoDivrapper,
+  InfoDivrapper,
   Errorlabel,
   ScoreLabel,
 } from "./style"
@@ -144,10 +144,10 @@ const Game = () => {
 
   return (
     <>
-      <InoDivrapper>
+      <InfoDivrapper>
         <Errorlabel isError={invalidMove}>Error..!! Invalid move</Errorlabel>
         <ScoreLabel>Marbles left : {score}</ScoreLabel>
-      </InoDivrapper>
+      </InfoDivrapper>
       <Board>
         <Top>
           {renderSquare(0, 2)}

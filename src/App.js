@@ -5,7 +5,9 @@ import Game from "./components/Game"
 const App = () => {
   return (
     <Wrapper>
-      <GameTitle>Brain-Vita</GameTitle>
+      <GameTitle>
+        <p>Brain-Vita</p>
+      </GameTitle>
       <Game />
     </Wrapper>
   )
