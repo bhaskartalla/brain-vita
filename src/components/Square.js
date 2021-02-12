@@ -8,7 +8,7 @@ const Box = styled.button`
   height: 100%;
   outline: none;
   font-family: fantasy;
-  font-size: 48px;
+  font-size: 32px;
   border: 1px solid aquamarine;
   background-color: ${({ isValid }) => (isValid ? "darkorange" : "beige")};
   &:active {

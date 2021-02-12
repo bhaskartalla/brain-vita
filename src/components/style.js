@@ -6,8 +6,8 @@ export const Board = styled.div`
   max-width: 560px;
   max-height: 560px;
   width: 98%;
-  height: 98%;
   margin: auto;
+  min-height: 560px;
   align-items: center;
 `
 
@@ -17,6 +17,7 @@ export const Top = styled.div`
   grid-template-rows: repeat(2, 1fr);
   width: 42%;
   height: 28%;
+  min-height: 140px;
 `
 
 export const Middle = styled.div`
@@ -24,6 +25,7 @@ export const Middle = styled.div`
   width: 100%;
   height: 42%;
   grid-template-columns: repeat(7, 1fr);
+  min-height: 210px;
   grid-template-rows: repeat(3, 1fr);
 `
 
@@ -32,6 +34,7 @@ export const Bottom = styled.div`
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   width: 42%;
+  min-height: 140px;
   height: 28%;
 `
 

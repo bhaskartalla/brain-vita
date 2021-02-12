@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useRef } from "react"
 import {
   Board,
   Top,
@@ -18,6 +18,8 @@ const Game = () => {
   const [sourcePos, setSourcePos] = useState([])
   const [invalidMove, setInvalidMove] = useState(false)
   const [score, setScore] = useState(32)
+  const [width, setWidth] = useState()
+  const board = useRef(null)
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -148,7 +150,7 @@ const Game = () => {
         <Errorlabel isError={invalidMove}>Error..!! Invalid move</Errorlabel>
         <ScoreLabel>Marbles left : {score}</ScoreLabel>
       </InfoDivrapper>
-      <Board>
+      <Board id={board} with={board?.current?.offsetWidth}>
         <Top>
           {renderSquare(0, 2)}
           {renderSquare(0, 3)}
