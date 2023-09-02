@@ -8,12 +8,12 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.2.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -41,6 +41,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.0.0"
-  },
-  "homepage": "http://{github-username}.github.io/{repo-name}"
+  }
 }
