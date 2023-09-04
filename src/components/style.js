@@ -1,13 +1,13 @@
-import styled from "styled-components"
+import styled from 'styled-components'
 
 export const Board = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 560px;
-  max-height: 560px;
+  ${'' /* max-width: 560px; */}
+  ${'' /* max-height: 560px; */}
   width: 98%;
   margin: auto;
-  min-height: 500px;
+  ${'' /* min-height: 500px; */}
   align-items: center;
   justify-content: center;
 `
@@ -15,28 +15,30 @@ export const Board = styled.div`
 export const Top = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  width: 42%;
-  height: 28%;
-  min-height: 140px;
+  ${'' /* grid-template-rows: repeat(2, 1fr); */}
+  ${'' /* width: 42%; */}
+  ${'' /* height: 28%; */}
+  ${'' /* min-height: 140px; */}
 `
 
 export const Middle = styled.div`
   display: grid;
-  width: 100%;
-  height: 42%;
+  ${'' /* width: 100%; */}
+  ${'' /* height: 42%; */}
   grid-template-columns: repeat(7, 1fr);
-  min-height: 210px;
-  grid-template-rows: repeat(3, 1fr);
+  ${'' /* min-height: 210px; */}
+  ${'' /* grid-template-rows: repeat(3, 1fr); */}
 `
 
 export const Bottom = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  ${
+    '' /* grid-template-rows: repeat(2, 1fr);
   width: 42%;
   min-height: 140px;
-  height: 28%;
+  height: 28%; */
+  }
 `
 
 export const InfoDivrapper = styled.div`
@@ -55,7 +57,7 @@ export const Errorlabel = styled.label`
   font-size: 18px;
   font-family: fantasy;
   color: #f44336;
-  visibility: ${({ isError }) => (isError ? "none" : "hidden")};
+  visibility: ${({ isError }) => (isError ? 'none' : 'hidden')};
 `
 
 export const ScoreLabel = styled.label`
