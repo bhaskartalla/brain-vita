@@ -17,8 +17,8 @@ const Box = styled.button`
   }
 
   @media (max-width: 568px) {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 `
 
@@ -27,8 +27,8 @@ const CircleImage = styled.img`
   height: 80px;
 
   @media (max-width: 568px) {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 `
 
