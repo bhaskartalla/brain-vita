@@ -39,11 +39,12 @@ const Square = (props) => {
       id={props.id}
       onClick={() => props.onClick()}
     >
-      {props.isEmpty === 'O' ? (
+      {props.isEmpty}
+      {/* {props.isEmpty === 'O' ? (
         <CircleImage src={circle} alt='react logo' />
       ) : (
         ''
-      )}
+      )} */}
     </Box>
   )
 }
