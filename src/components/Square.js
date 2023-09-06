@@ -33,7 +33,6 @@ const CircleImage = styled.img`
 `
 
 const Square = (props) => {
-  console.log('Square props', props)
   return (
     <Box
       isValid={props.isValidPos}
