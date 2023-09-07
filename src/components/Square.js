@@ -2,9 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import circle from './../assets/circle.png'
 
-const Box = styled.button`
+const Box = styled.div`
   ${'' /* max-width: 80px; */}
   ${'' /* max-height: 80px; */}
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80px;
   height: 80px;
   outline: none;
@@ -27,8 +30,8 @@ const CircleImage = styled.img`
   height: 80px;
 
   @media (max-width: 568px) {
-    width: 45px;
-    height: 45px;
+    width: 30px;
+    height: 30px;
   }
 `
 
@@ -39,12 +42,12 @@ const Square = (props) => {
       id={props.id}
       onClick={() => props.onClick()}
     >
-      {props.isEmpty}
-      {/* {props.isEmpty === 'O' ? (
+      {/* {props.isEmpty} */}
+      {props.isEmpty === 'O' ? (
         <CircleImage src={circle} alt='react logo' />
       ) : (
         ''
-      )} */}
+      )}
     </Box>
   )
 }
