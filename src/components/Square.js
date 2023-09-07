@@ -26,8 +26,8 @@ const Box = styled.div`
 `
 
 const CircleImage = styled.img`
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 
   @media (max-width: 568px) {
     width: 30px;
